@@ -11,7 +11,7 @@ int main()
     int *p, *p_back;
     
     printf("Enter a message: ");
-    for(p = &phrase[0]; (ch = getchar()) != '\n' && p < &phrase[LEN-1]; p++){
+    for(p = phrase; (ch = getchar()) != '\n' && p < &phrase[LEN-1]; p++){
         //putchar(ch);
         if(isalpha(ch)){
             *p = ch;
@@ -23,7 +23,7 @@ int main()
 
 
     //printf("\ni: %d\n", i);
-    for(--p, p_back = &phrase[0];p >= &phrase[0]; p--, p_back++){
+    for(--p, p_back = phrase;p >= &phrase[0]; p--, p_back++){
         //putchar(phrase[i]);
         if(tolower(*p) != tolower(*p_back)){
             diff = 1;
