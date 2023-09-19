@@ -1,23 +1,23 @@
 #include <stdio.h>
 
-#define STR_LEN 80
-#define SENT_LEN 10
+int f(char *s, char *t);
 
 int read_line(char str[], int n);
 
 int main(void)
 {
-    char *p = "abc";
-    puts(*p);
+    printf("%d", f("abcd", "babc"));
     return 0;
 }
 
-int read_line(char str[], int n)
+int f(char *s, char *t)
 {
-    int ch, i = 0;
-    while ((ch = getchar()) != '\n')
-        if (i < n)
-            str[i++] = ch;
-    str[i] = '\0'; /* terminates string */
-    return i;      /* number of characters stored */
+    char *p1, *p2;
+    for (p1 = s; *p1; p1++) {
+        for (p2 = t; *p2; p2++) {
+            if (*p1 == *p2) break;
+        }
+        if (*p2 == '\0') break;
+    }
+    return p1 - s;
 }
