@@ -123,6 +123,7 @@ void search(void)
     else
         printf("Part not found.\n");
 }
+
 /**********************************************************
  * update: Prompts the user to enter a part number. *
  * Prints an error message if the part doesn't *
@@ -130,7 +131,6 @@ void search(void)
  * change in quantity on hand and updates the *
  * database. *
  **********************************************************/
-
 void update(void)
 {
     int i, number, change;
