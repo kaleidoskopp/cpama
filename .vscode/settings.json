@@ -2,6 +2,7 @@
     "files.associations": {
         "ctype.h": "c",
         "E19.C": "cpp",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "stdio.h": "c"
     }
 }
